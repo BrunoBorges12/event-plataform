@@ -1,12 +1,26 @@
-import { useState } from 'react'
+import { gql, useQuery } from '@apollo/client'
+import { useEffect, useState } from 'react'
+import { Header } from './components/Header'
+import { Lesson } from './components/Lesson'
+import { Video } from './components/Video'
+import { client } from './lib/apollo'
 import logo from './logo.svg'
+import { Event } from './pages/Event'
 import './style/global.css'
 
-function App() {
+interface lesson {
+  id:string,
+  title:string
+}
 
+function App() {
   return (
   
-  <h1 className=' bg-slate-100 text-2xl font-bold'>Obrigado Deus</h1>
+   <> 
+
+    <Event/>
+    
+    </>
   )
 }
 
